@@ -1,0 +1,12 @@
+To run the server, get into the directory of the mvnw in a console and write:
+./mvnw spring-boot:run
+
+To check that the wsdl is visible and webservice is active type in browser:
+http://localhost:8080/ws/countries.wsdl
+
+
+To make a request to the local server go to the directory of the requestxml file (currently in the same directory as mvnw) and write in a console:
+url --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
+
+You should receive: 
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><ns2:getCountryResponse xmlns:ns2="http://spring.io/guides/gs-producing-web-service"><ns2:country><ns2:name>Spain</ns2:name><ns2:population>46704314</ns2:population><ns2:capital>Madrid</ns2:capital><ns2:currency>EUR</ns2:currency></ns2:country></ns2:getCountryResponse></SOAP-ENV:Body></SOAP-ENV:Envelope>
