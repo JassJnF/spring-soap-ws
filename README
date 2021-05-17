@@ -5,7 +5,7 @@ To check that the wsdl is visible and webservice is active type in browser:
 http://localhost:8080/ws/countries.wsdl
 
 
-To make a request to the local server go to the directory of the requestxml file (currently in the same directory as mvnw) and write in a console:
+To make a request to the local server go to the directory of the request.xml file (currently in the same directory as mvnw) and write in a console:
 url --header "content-type: text/xml" -d @request.xml http://localhost:8080/ws
 
 You should receive: 
